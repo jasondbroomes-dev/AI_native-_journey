@@ -1,12 +1,22 @@
-# This script asks the user for their name and then prints a greeting.
-
 def get_user_name():
-  """
-  Prompts the user to enter their name and returns the input.
-  """
-  name = input("Please enter your name: ")
-  return name
+    """
+    Prompts the user to enter their name.
+    Returns both the lowercase version (for checking)
+    and the capitalized version (for display).
+    """
+    name = input("Please enter your name: ")
+    return name.lower(), name.capitalize()
 
 if __name__ == "__main__":
-  user_name = get_user_name()
-  print(f"Hello, {user_name}! Nice to meet you.")
+    user_name_lower, user_name_display = get_user_name()
+
+    if user_name_lower == "jason":
+        print(f"Hey, it's the awesome AI Director, {user_name_display}!")
+    elif user_name_lower == "alex":
+        print(f"Salute, Captain {user_name_display}!")
+    elif user_name_lower == "maya":
+        print(f"{user_name_display} the Marvelous has arrived!")
+    elif user_name_lower == "sophia":
+        print(f"Welcome, the Brilliant {user_name_display}!")
+    else:
+        print(f"Hello, {user_name_display}! Nice to meet you.")
