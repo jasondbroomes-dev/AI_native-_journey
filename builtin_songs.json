@@ -1,0 +1,308 @@
+{
+  "chill": [
+    [
+      "Lo-Fi Beats",
+      "Chillhop Music",
+      "https://youtu.be/5qap5aO4i9A"
+    ],
+    [
+      "Weightless",
+      "Marconi Union",
+      "https://open.spotify.com/track/5c1O1WlU9fK3VQoZ9LrF2G"
+    ],
+    [
+      "Coffee",
+      "Beabadoobee",
+      "https://youtu.be/fM3O-WDqSNA"
+    ]
+  ],
+  "hype": [
+    [
+      "Power",
+      "Kanye West",
+      "https://youtu.be/L53gjP-TtGE"
+    ],
+    [
+      "Can't Hold Us",
+      "Macklemore & Ryan Lewis",
+      "https://youtu.be/2zNSgSzhBfM"
+    ],
+    [
+      "Eye of the Tiger",
+      "Survivor",
+      "https://youtu.be/btPJPFnesV4"
+    ]
+  ],
+  "sad": [
+    [
+      "Someone Like You",
+      "Adele",
+      "https://youtu.be/hLQl3WQQoQ0"
+    ],
+    [
+      "Skinny Love",
+      "Bon Iver",
+      "https://youtu.be/ssdgFoHLwnk"
+    ],
+    [
+      "The Night We Met",
+      "Lord Huron",
+      "https://youtu.be/KtlgYxa6BMU"
+    ]
+  ],
+  "study": [
+    [
+      "Clair de Lune",
+      "Debussy",
+      "https://youtu.be/CvFH_6DNRCY"
+    ],
+    [
+      "Merry Christmas Mr. Lawrence",
+      "Ryuichi Sakamoto",
+      "https://youtu.be/J--TDEHizVA"
+    ],
+    [
+      "Study Session",
+      "Brain.fm",
+      "https://www.youtube.com/watch?v=qWZGtLZaBBc"
+    ]
+  ],
+  "dance": [
+    [
+      "Uptown Funk",
+      "Mark Ronson ft. Bruno Mars",
+      "https://youtu.be/OPf0YbXqDm0"
+    ],
+    [
+      "Don't Start Now",
+      "Dua Lipa",
+      "https://youtu.be/oygrmJFKYZY"
+    ],
+    [
+      "Dancing Queen",
+      "ABBA",
+      "https://youtu.be/xFrGuyw1V8s"
+    ]
+  ],
+  "romantic": [
+    [
+      "All of Me",
+      "John Legend",
+      "https://youtu.be/450p7goxZqg"
+    ],
+    [
+      "Perfect",
+      "Ed Sheeran",
+      "https://youtu.be/2Vv-BfVoq4g"
+    ],
+    [
+      "Adore You",
+      "Harry Styles",
+      "https://youtu.be/yezDEWako8U"
+    ]
+  ],
+  "motivational": [
+    [
+      "Lose Yourself",
+      "Eminem",
+      "https://youtu.be/_Yhyp-_hX2s"
+    ],
+    [
+      "Stronger",
+      "Kanye West",
+      "https://youtu.be/Pi5PntUju_E"
+    ],
+    [
+      "Fight Song",
+      "Rachel Platten",
+      "https://youtu.be/XsX3ATc3FbA"
+    ]
+  ],
+  "happy": [
+    [
+      "Happy",
+      "Pharrell Williams",
+      "https://youtu.be/ZbZSe6N_BXs"
+    ],
+    [
+      "Can't Stop The Feeling!",
+      "Justin Timberlake",
+      "https://youtu.be/ru0K8uYEZWw"
+    ],
+    [
+      "Walking on Sunshine",
+      "Katrina & The Waves",
+      "https://youtu.be/iPUmE-tne5U"
+    ]
+  ],
+  "melancholy": [
+    [
+      "Fix You",
+      "Coldplay",
+      "https://youtu.be/k4V3Mo61fJM"
+    ],
+    [
+      "Everybody Hurts",
+      "R.E.M.",
+      "https://youtu.be/jWZsXfFuC7Y"
+    ],
+    [
+      "Tears in Heaven",
+      "Eric Clapton",
+      "https://youtu.be/JxPj3GAYYZ0"
+    ]
+  ],
+  "party": [
+    [
+      "24K Magic",
+      "Bruno Mars",
+      "https://youtu.be/UqyT8IEBkvY"
+    ],
+    [
+      "I Gotta Feeling",
+      "Black Eyed Peas",
+      "https://youtu.be/uSD4vsh1zDA"
+    ],
+    [
+      "Party Rock Anthem",
+      "LMFAO",
+      "https://youtu.be/KQ6zr6kCPj8"
+    ]
+  ],
+  "calm": [
+    [
+      "River Flows In You",
+      "Yiruma",
+      "https://youtu.be/7maJOI3QMu0"
+    ],
+    [
+      "Weightless",
+      "Marconi Union",
+      "https://youtu.be/UfcAVejslrU"
+    ],
+    [
+      "Sunset Lover",
+      "Petit Biscuit",
+      "https://youtu.be/0z0Qzn0gf1I"
+    ]
+  ],
+  "nostalgic": [
+    [
+      "Summer of '69",
+      "Bryan Adams",
+      "https://youtu.be/eFjjO_lhf9c"
+    ],
+    [
+      "Take On Me",
+      "a-ha",
+      "https://youtu.be/djV11Xbc914"
+    ],
+    [
+      "Yesterday",
+      "The Beatles",
+      "https://youtu.be/NrgmdOz227I"
+    ]
+  ],
+  "anxious": [
+    [
+      "Breathe Me",
+      "Sia",
+      "https://youtu.be/ghPcYqn0p4Y"
+    ],
+    [
+      "Creep",
+      "Radiohead",
+      "https://youtu.be/XFkzRNyygfk"
+    ],
+    [
+      "Everybody's Got To Learn Sometime",
+      "Beck",
+      "https://youtu.be/yy5WnK6YhMQ"
+    ]
+  ],
+  "hopeful": [
+    [
+      "Here Comes The Sun",
+      "The Beatles",
+      "https://youtu.be/KQetemT1sWc"
+    ],
+    [
+      "Dog Days Are Over",
+      "Florence + The Machine",
+      "https://youtu.be/iWOyfLBYtuU"
+    ],
+    [
+      "Good Life",
+      "OneRepublic",
+      "https://youtu.be/jZhQOvvV45w"
+    ]
+  ],
+  "angry": [
+    [
+      "Break Stuff",
+      "Limp Bizkit",
+      "https://youtu.be/ZpUYjpKg9KY"
+    ],
+    [
+      "Killing In The Name",
+      "Rage Against The Machine",
+      "https://youtu.be/bWXazVhlyxQ"
+    ],
+    [
+      "You Oughta Know",
+      "Alanis Morissette",
+      "https://youtu.be=NPcyTyilmYY"
+    ]
+  ],
+  "reflective": [
+    [
+      "The Sound of Silence",
+      "Simon & Garfunkel",
+      "https://youtu.be/4zLfCnGVeL4"
+    ],
+    [
+      "Hallelujah",
+      "Jeff Buckley",
+      "https://youtu.be/y8AWFf7EAc4"
+    ],
+    [
+      "Fast Car",
+      "Tracy Chapman",
+      "https://youtu.be/uTIB10eQnA0"
+    ]
+  ],
+  "fun": [
+    [
+      "Happy",
+      "Pharrell Williams",
+      "https://youtu.be/ZbZSe6N_BXs"
+    ],
+    [
+      "Shake It Off",
+      "Taylor Swift",
+      "https://youtu.be/nfWlot6h_JM"
+    ],
+    [
+      "Can't Stop The Feeling",
+      "Justin Timberlake",
+      "https://youtu.be/ru0K8uYEZWw"
+    ]
+  ],
+  "sleepy": [
+    [
+      "Night Owl",
+      "Galimatias",
+      "https://youtu.be/8-SxHJ0ayN8"
+    ],
+    [
+      "Holocene",
+      "Bon Iver",
+      "https://youtu.be/TapN6N8OYMI"
+    ],
+    [
+      "Sunset Lover",
+      "Petit Biscuit",
+      "https://youtu.be/0z0Qzn0gf1I"
+    ]
+  ]
+}
