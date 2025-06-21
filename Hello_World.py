@@ -11,7 +11,7 @@ if __name__ == "__main__":
     user_name_lower, user_name_display = get_user_name()
 
     if user_name_lower == "jason":
-        print(f"Hey, it's the in Marvellous AI Trainee, {jason}!")
+        print(f"Hey, it's the in Marvellous AI Trainee, {user_name_display}!")
     elif user_name_lower == "alex":
         print(f"Salute, Captain {user_name_display}!")
     elif user_name_lower == "maya":
