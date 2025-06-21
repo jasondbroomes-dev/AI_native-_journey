@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.name }} - AI Native Journey{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/" class="text-light">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ project.name }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">
+                    <i class="fas fa-code me-2"></i>{{ project.name }}
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="code-block">
+                    <pre><code class="language-python">{{ code }}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-info-circle me-2"></i>Project Details
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ project.description }}</p>
+                
+                <div class="mb-3">
+                    <strong>Category:</strong>
+                    <span class="badge bg-primary ms-2">{{ project.category }}</span>
+                </div>
+                
+                <div class="mb-3">
+                    <strong>File:</strong>
+                    <code class="ms-2">{{ project.filename }}</code>
+                </div>
+                
+                <div class="mb-3">
+                    <strong>Features:</strong>
+                    <div class="mt-2">
+                        {% for feature in project.features %}
+                        <span class="feature-badge">{{ feature }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-play me-2"></i>Run Project
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    To run this project locally, use the following command in your terminal:
+                </p>
+                <div class="code-block">
+                    <code>python3 {{ project.filename }}</code>
+                </div>
+                <div class="mt-3">
+                    <a href="/" class="btn btn-primary btn-sm">
+                        <i class="fas fa-arrow-left me-1"></i>Back to Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .code-block pre {
+        background: #1a1a1a;
+        color: #f8f8f2;
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 0;
+        overflow-x: auto;
+    }
+    
+    .code-block code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .breadcrumb {
+        background: transparent;
+        padding: 0;
+    }
+    
+    .breadcrumb-item a {
+        text-decoration: none;
+    }
+    
+    .breadcrumb-item.active {
+        color: var(--accent-color);
+    }
+</style>
+{% endblock %} 

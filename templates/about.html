@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}About - AI Native Journey{% endblock %}
+
+{% block content %}
+<div class="hero-section text-center">
+    <h1 class="display-4 mb-4">
+        <i class="fas fa-user me-3"></i>About Me
+    </h1>
+    <p class="lead mb-4">Passionate about AI and Python programming</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="mb-0">
+                    <i class="fas fa-graduation-cap me-2"></i>My Journey
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Welcome to my AI Native Journey! I'm passionate about exploring the fascinating world of artificial intelligence 
+                    and Python programming. This portfolio represents my learning journey as I dive deep into various programming 
+                    concepts and build practical applications.
+                </p>
+                
+                <p class="card-text">
+                    Each project in this collection demonstrates different aspects of Python programming, from basic concepts 
+                    like user input and conditional statements to more advanced topics like object-oriented programming and 
+                    data manipulation.
+                </p>
+                
+                <p class="card-text">
+                    My goal is to continue expanding my knowledge in AI and machine learning while building useful, 
+                    real-world applications that can make a difference.
+                </p>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="mb-0">
+                    <i class="fas fa-tools me-2"></i>Skills & Technologies
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Programming Languages</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fab fa-python me-2 text-primary"></i>Python</li>
+                            <li><i class="fas fa-code me-2 text-success"></i>HTML/CSS</li>
+                            <li><i class="fas fa-code me-2 text-warning"></i>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Frameworks & Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-flask me-2 text-info"></i>Flask</li>
+                            <li><i class="fab fa-bootstrap me-2 text-primary"></i>Bootstrap</li>
+                            <li><i class="fab fa-git-alt me-2 text-danger"></i>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-chart-bar me-2"></i>Project Stats
+                </h5>
+            </div>
+            <div class="card-body text-center">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="text-primary">{{ projects|length }}</h3>
+                        <small class="text-muted">Projects</small>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="text-success">5</h3>
+                        <small class="text-muted">Categories</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-2">
+                    <i class="fas fa-envelope me-2 text-primary"></i>
+                    jason.broomes@pursuit.org
+                </p>
+                <p class="mb-2">
+                    <i class="fab fa-github me-2 text-dark"></i>
+                    jasondbroomes-dev
+                </p>
+                <div class="mt-3">
+                    <a href="/" class="btn btn-primary btn-sm">
+                        <i class="fas fa-home me-1"></i>Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>Current Focus
+                </h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check-circle me-2 text-success"></i>Python Programming</li>
+                    <li><i class="fas fa-check-circle me-2 text-success"></i>Web Development</li>
+                    <li><i class="fas fa-spinner me-2 text-warning"></i>AI & Machine Learning</li>
+                    <li><i class="fas fa-spinner me-2 text-warning"></i>Data Science</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

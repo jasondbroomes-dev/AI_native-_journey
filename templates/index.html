@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}AI Native Journey - Portfolio{% endblock %}
+
+{% block content %}
+<div class="hero-section text-center">
+    <h1 class="display-4 mb-4">
+        <i class="fas fa-rocket me-3"></i>Welcome to My AI Native Journey
+    </h1>
+    <p class="lead mb-4">Exploring the world of AI and Python programming through hands-on projects</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <p class="text-muted">
+                This portfolio showcases my journey learning Python programming and AI concepts. 
+                Each project demonstrates different programming concepts and problem-solving approaches.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="mb-4">
+            <i class="fas fa-project-diagram me-2"></i>My Projects
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    {% for project in projects %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <span class="badge bg-primary">{{ project.category }}</span>
+                </div>
+                <p class="card-text text-muted">{{ project.description }}</p>
+                
+                <div class="mb-3">
+                    <strong>Features:</strong>
+                    <div class="mt-2">
+                        {% for feature in project.features %}
+                        <span class="feature-badge">{{ feature }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">
+                        <i class="fas fa-file-code me-1"></i>{{ project.filename }}
+                    </small>
+                    <a href="/project/{{ project.filename }}" class="btn btn-primary btn-sm">
+                        <i class="fas fa-eye me-1"></i>View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body text-center">
+                <h4 class="mb-3">
+                    <i class="fas fa-chart-line me-2"></i>Project Statistics
+                </h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-primary">{{ projects|length }}</h3>
+                            <p class="text-muted">Total Projects</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-success">5</h3>
+                            <p class="text-muted">Categories</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-info">100%</h3>
+                            <p class="text-muted">Python</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-warning">Active</h3>
+                        <p class="text-muted">Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
