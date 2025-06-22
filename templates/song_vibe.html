@@ -472,6 +472,9 @@
                 <button class="tab-button active" onclick="showTab('add-vibe')">
                     <i class="fas fa-plus"></i> Add New Vibe
                 </button>
+                <button class="tab-button" onclick="showTab('word-vibe')">
+                    <i class="fas fa-pen"></i> Word Vibe
+                </button>
                 <button class="tab-button" onclick="showTab('favorites')">
                     <i class="fas fa-star"></i> My Favorites
                 </button>
@@ -496,6 +499,37 @@
                 </form>
             </div>
             
+            <div id="word-vibe" class="tab-content">
+                <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">🎭 Describe Your Mood with Words</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Enter three words to describe how you're feeling, and I'll find the perfect song for your mood!
+                </p>
+                <form id="word-vibe-form" class="form-grid">
+                    <input type="text" id="word-noun" placeholder="Enter a noun (e.g., heart, music, ocean)" required>
+                    <input type="text" id="word-verb" placeholder="Enter a verb (e.g., dance, dream, relax)" required>
+                    <input type="text" id="word-adjective" placeholder="Enter an adjective (e.g., happy, calm, excited)" required>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-magic"></i> Find My Song
+                    </button>
+                </form>
+                <div id="word-recommendation-card" style="display: none; margin-top: 2rem;">
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">✨ Your Word-Based Match!</h3>
+                    <div class="song-info">
+                        <h3 id="word-song-title"></h3>
+                        <p id="word-song-artist"></p>
+                        <p id="word-mood-message" style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem;"></p>
+                    </div>
+                    <div class="action-buttons">
+                        <a id="word-song-link" href="#" target="_blank" class="btn">
+                            <i class="fab fa-youtube"></i> Listen Now
+                        </a>
+                        <button onclick="saveWordToFavorites()" class="btn btn-secondary">
+                            <i class="fas fa-heart"></i> Save to Favorites
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <div id="favorites" class="tab-content">
                 <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">❤️ My Favorites</h2>
                 <ul id="favorites-list"></ul>
@@ -587,6 +621,7 @@
 
 <script>
     let currentSong = null;
+    let currentWordSong = null;
 
     function showMessage(message, type = 'success') {
         const messageDiv = document.createElement('div');
@@ -654,6 +689,23 @@
         }
     }
 
+    async function saveWordToFavorites() {
+        if (!currentWordSong) return;
+        
+        try {
+            const response = await fetch('/save_favorite', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ song: currentWordSong })
+            });
+            const data = await response.json();
+            showMessage(data.message, data.success ? 'success' : 'error');
+            if(data.success) loadFavorites();
+        } catch (error) {
+            showMessage('Failed to save favorite. Please try again.', 'error');
+        }
+    }
+
     document.getElementById('add-vibe-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -681,6 +733,45 @@
             }
         } catch (error) {
             showMessage('Failed to add song. Please try again.', 'error');
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    });
+
+    document.getElementById('word-vibe-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const btn = this.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<div class="loading"></div> Finding your song...';
+        btn.disabled = true;
+
+        try {
+            const noun = document.getElementById('word-noun').value;
+            const verb = document.getElementById('word-verb').value;
+            const adjective = document.getElementById('word-adjective').value;
+
+            const response = await fetch('/get_word_recommendation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ noun, verb, adjective })
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                currentWordSong = data.song;
+                document.getElementById('word-song-title').innerText = data.song.title;
+                document.getElementById('word-song-artist').innerText = `by ${data.song.artist}`;
+                document.getElementById('word-mood-message').innerText = data.message;
+                document.getElementById('word-song-link').href = data.song.link;
+                document.getElementById('word-recommendation-card').style.display = 'block';
+                showMessage(`Found the perfect ${data.mood} song for your words!`);
+            } else {
+                showMessage(data.message, 'error');
+            }
+        } catch (error) {
+            showMessage('Failed to get word recommendation. Please try again.', 'error');
         } finally {
             btn.innerHTML = originalText;
             btn.disabled = false;

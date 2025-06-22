@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import random
 import os
 import json
+from get_user_words import get_user_words
 
 app = Flask(__name__)
 
@@ -264,6 +265,77 @@ def save_favorite():
 @app.route('/get_vibes')
 def get_vibes():
     return jsonify(list(get_full_library().keys()))
+
+@app.route('/get_word_recommendation', methods=['POST'])
+def get_word_recommendation():
+    """Get song recommendation based on user-provided words"""
+    data = request.json
+    noun = data.get('noun', '').lower()
+    verb = data.get('verb', '').lower()
+    adjective = data.get('adjective', '').lower()
+    
+    # Map words to moods based on their characteristics
+    word_to_mood = {
+        # Nouns
+        'music': 'happy', 'dance': 'dance', 'party': 'party', 'love': 'romantic',
+        'work': 'study', 'study': 'study', 'sleep': 'sleepy', 'dream': 'sleepy',
+        'heart': 'romantic', 'sun': 'happy', 'rain': 'melancholy', 'storm': 'angry',
+        'ocean': 'calm', 'mountain': 'motivational', 'road': 'motivational',
+        'friend': 'happy', 'family': 'romantic', 'home': 'calm',
+        
+        # Verbs
+        'dance': 'dance', 'sing': 'happy', 'laugh': 'happy', 'cry': 'sad',
+        'sleep': 'sleepy', 'dream': 'sleepy', 'work': 'study', 'study': 'study',
+        'run': 'motivational', 'fight': 'angry', 'love': 'romantic', 'hate': 'angry',
+        'relax': 'calm', 'party': 'party', 'celebrate': 'party', 'think': 'reflective',
+        'remember': 'nostalgic', 'hope': 'hopeful', 'worry': 'anxious',
+        
+        # Adjectives
+        'happy': 'happy', 'sad': 'sad', 'angry': 'angry', 'calm': 'calm',
+        'excited': 'hype', 'tired': 'sleepy', 'energetic': 'hype', 'romantic': 'romantic',
+        'peaceful': 'calm', 'wild': 'party', 'quiet': 'study', 'loud': 'party',
+        'beautiful': 'romantic', 'ugly': 'angry', 'bright': 'happy', 'dark': 'melancholy',
+        'warm': 'romantic', 'cold': 'melancholy', 'soft': 'calm', 'hard': 'angry',
+        'smooth': 'chill', 'rough': 'angry', 'fast': 'hype', 'slow': 'chill',
+        'fun': 'fun', 'boring': 'study', 'amazing': 'happy', 'terrible': 'sad'
+    }
+    
+    # Find the best mood match based on the words
+    mood_scores = {}
+    for word in [noun, verb, adjective]:
+        if word in word_to_mood:
+            mood = word_to_mood[word]
+            mood_scores[mood] = mood_scores.get(mood, 0) + 1
+    
+    # If no direct matches, try partial matches
+    if not mood_scores:
+        for word in [noun, verb, adjective]:
+            for mood_word, mood in word_to_mood.items():
+                if word in mood_word or mood_word in word:
+                    mood_scores[mood] = mood_scores.get(mood, 0) + 0.5
+    
+    # Get the mood with highest score, or default to 'chill'
+    if mood_scores:
+        best_mood = max(mood_scores, key=mood_scores.get)
+    else:
+        best_mood = 'chill'
+    
+    # Get recommendation for the best mood
+    full_library = get_full_library()
+    if best_mood in full_library and full_library[best_mood]:
+        song = random.choice(full_library[best_mood])
+        return jsonify({
+            'success': True,
+            'song': {'title': song[0], 'artist': song[1], 'link': song[2]},
+            'mood': best_mood,
+            'words': {'noun': noun, 'verb': verb, 'adjective': adjective},
+            'message': f"Based on your words '{noun}', '{verb}', and '{adjective}', I think you're feeling {best_mood}!"
+        })
+    else:
+        return jsonify({
+            'success': False,
+            'message': f"I couldn't find a perfect match for your words, but here's a chill song for you!"
+        })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002) 
