@@ -1,0 +1,29 @@
+<input type="text" id="name" placeholder="Enter your name" />
+
+<label for="favNumber">What is your favorite number?</label>
+<input type="number" id="favNumber" placeholder="Enter a number" />
+
+<button onclick="generateLuckyNumber()">Get Your Lucky Number</button>
+
+<div id="result"></div>
+
+<script>
+  function generateLuckyNumber() {
+    const name = document.getElementById('name').value;
+    const favNumber = parseInt(document.getElementById('favNumber').value);
+
+    if (!name || isNaN(favNumber)) {
+      document.getElementById('result').innerText = "Please enter both your name and a valid number.";
+      return;
+    }
+
+    const luckyNumber = favNumber + 7;
+    const evenOrOdd = luckyNumber % 2 === 0 ? "even" : "odd";
+
+    const message = `Hi ${name}, your lucky number is ${luckyNumber}! That's an ${evenOrOdd} lucky number!`;
+    document.getElementById('result').innerText = message;
+  }
+</script>
+
+</body>
+</html>

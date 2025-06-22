@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongVibe Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --primary-color: #1DB954;
+            --card-bg: #181818;
+            --text-color: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --hover-color: #282828;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        h1, h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-top: 0;
+        }
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        input[type="text"], input[type="url"] {
+            flex-grow: 1;
+            background-color: var(--hover-color);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        button:hover {
+            background-color: #1ED760;
+        }
+        #recommendation-card {
+            display: none;
+            text-align: center;
+        }
+        .song-info {
+            margin: 1rem 0;
+        }
+        .song-info h3 { margin: 0; }
+        .song-info p { margin: 0.25rem 0; color: var(--text-secondary); }
+        .vibe-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .vibe-tag {
+            background-color: var(--hover-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid #333;
+            margin-bottom: 1rem;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            padding: 1rem 0;
+            cursor: pointer;
+            font-size: 1rem;
+            border-bottom: 2px solid transparent;
+        }
+        .tab-button.active {
+            color: var(--text-color);
+            border-bottom-color: var(--primary-color);
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        #favorites-list li, #vibe-list li {
+            background-color: var(--hover-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            list-style: none;
+        }
+        #favorites-list { padding: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><i class="fas fa-music"></i> SongVibe Recommender</h1>
+            <p>What's your vibe today? Enter a mood below to get a song recommendation.</p>
+            <div class="input-group">
+                <input type="text" id="vibe-input" placeholder="e.g., chill, happy, focused...">
+                <button onclick="getRecommendation()"><i class="fas fa-search"></i> Get Vibe</button>
+            </div>
+             <div id="recommendation-card">
+                <h2>Your Vibe Match!</h2>
+                <div class="song-info">
+                    <h3 id="song-title"></h3>
+                    <p id="song-artist"></p>
+                </div>
+                <a id="song-link" href="#" target="_blank" style="text-decoration: none;"><button><i class="fab fa-spotify"></i> Listen Now</button></a>
+                <button onclick="saveToFavorites()" class="secondary"><i class="fas fa-heart"></i> Save</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('add-vibe')"><i class="fas fa-plus"></i> Add New Vibe</button>
+                <button class="tab-button" onclick="showTab('favorites')"><i class="fas fa-star"></i> My Favorites</button>
+                <button class="tab-button" onclick="showTab('all-vibes')"><i class="fas fa-list"></i> All Vibes</button>
+            </div>
+
+            <div id="add-vibe" class="tab-content active">
+                <h2>Add a New Song</h2>
+                <form id="add-vibe-form">
+                    <input type="text" id="new-vibe" placeholder="Vibe Category (e.g., workout)" required><br><br>
+                    <input type="text" id="new-title" placeholder="Song Title" required><br><br>
+                    <input type="text" id="new-artist" placeholder="Artist" required><br><br>
+                    <input type="url" id="new-link" placeholder="Spotify/YouTube Link" required><br><br>
+                    <button type="submit"><i class="fas fa-plus"></i> Add Song</button>
+                </form>
+            </div>
+            
+            <div id="favorites" class="tab-content">
+                <h2>My Favorites</h2>
+                <ul id="favorites-list"></ul>
+            </div>
+
+            <div id="all-vibes" class="tab-content">
+                <h2>Available Vibes</h2>
+                 <div id="vibe-tags" class="vibe-tags"></div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let currentSong = null;
+
+    async function getRecommendation() {
+        const vibe = document.getElementById('vibe-input').value;
+        if (!vibe) return;
+
+        const response = await fetch('/get_recommendation', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ vibe })
+        });
+        const data = await response.json();
+
+        if (data.success) {
+            currentSong = data.song;
+            document.getElementById('song-title').innerText = data.song.title;
+            document.getElementById('song-artist').innerText = `by ${data.song.artist}`;
+            document.getElementById('song-link').href = data.song.link;
+            document.getElementById('recommendation-card').style.display = 'block';
+        } else {
+            alert(data.message);
+        }
+    }
+
+    async function saveToFavorites() {
+        if (!currentSong) return;
+        const response = await fetch('/save_favorite', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ song: currentSong })
+        });
+        const data = await response.json();
+        alert(data.message);
+        if(data.success) loadFavorites();
+    }
+
+    document.getElementById('add-vibe-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const vibe = document.getElementById('new-vibe').value;
+        const title = document.getElementById('new-title').value;
+        const artist = document.getElementById('new-artist').value;
+        const link = document.getElementById('new-link').value;
+
+        const response = await fetch('/add_vibe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ vibe, title, artist, link })
+        });
+        const data = await response.json();
+        alert(data.message);
+        if (data.success) {
+            this.reset();
+            loadAllVibes();
+        }
+    });
+
+    function showTab(tabName) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabName).classList.add('active');
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`).classList.add('active');
+        
+        if (tabName === 'favorites') loadFavorites();
+        if (tabName === 'all-vibes') loadAllVibes();
+    }
+
+    async function loadFavorites() {
+        const response = await fetch('/get_favorites');
+        const favorites = await response.json();
+        const list = document.getElementById('favorites-list');
+        list.innerHTML = favorites.map(fav => `<li>${fav.title} by ${fav.artist}</li>`).join('');
+    }
+
+    async function loadAllVibes() {
+        const response = await fetch('/get_vibes');
+        const vibes = await response.json();
+        const container = document.getElementById('vibe-tags');
+        container.innerHTML = vibes.map(vibe => `<span class="vibe-tag" onclick="setVibeInput('${vibe}')">${vibe}</span>`).join('');
+    }
+    
+    function setVibeInput(vibe) {
+        document.getElementById('vibe-input').value = vibe;
+        getRecommendation();
+    }
+
+    // Initial load
+    loadAllVibes();
+
+</script>
+</body>
+</html> 
