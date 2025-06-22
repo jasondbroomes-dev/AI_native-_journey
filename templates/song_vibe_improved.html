@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Vibe Recommender - Improved</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #16213e;
+            --accent-primary: #4f46e5;
+            --accent-secondary: #7c3aed;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--accent-primary);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .recommendation-card {
+            display: none;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .song-info {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .song-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+
+        .song-info p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .song-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .favorites-list {
+            list-style: none;
+        }
+
+        .favorites-list li {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .mood-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .mood-tag {
+            background: rgba(79, 70, 229, 0.2);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(79, 70, 229, 0.3);
+        }
+
+        .mood-tag:hover {
+            background: rgba(79, 70, 229, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .add-song-form {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .song-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .message.success {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+
+        .message.error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid var(--error);
+            color: var(--error);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--accent-primary);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .song-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-music"></i> Song Vibe Recommender</h1>
+            <p>Discover the perfect music for your mood with AI-powered recommendations</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Recommendation Card -->
+            <div class="card">
+                <h2><i class="fas fa-search"></i> Find Your Vibe</h2>
+                <div class="input-group">
+                    <label for="vibe-input">What's your vibe today?</label>
+                    <input type="text" id="vibe-input" placeholder="e.g., chill, happy, focused, sad...">
+                </div>
+                <button class="btn" onclick="getRecommendation()">
+                    <i class="fas fa-magic"></i> Get Recommendation
+                </button>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Finding the perfect song for you...</p>
+                </div>
+
+                <div class="recommendation-card" id="recommendation-card">
+                    <div class="song-info">
+                        <h3 id="song-title"></h3>
+                        <p id="song-artist"></p>
+                    </div>
+                    <div class="song-actions">
+                        <a id="song-link" href="#" target="_blank" class="btn">
+                            <i class="fab fa-youtube"></i> Listen Now
+                        </a>
+                        <button class="btn btn-secondary" onclick="saveToFavorites()">
+                            <i class="fas fa-heart"></i> Save to Favorites
+                        </button>
+                    </div>
+                </div>
+
+                <div class="message" id="message"></div>
+            </div>
+
+            <!-- Management Card -->
+            <div class="card">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showTab('favorites')">
+                        <i class="fas fa-star"></i> Favorites
+                    </button>
+                    <button class="tab-btn" onclick="showTab('add-mood')">
+                        <i class="fas fa-plus"></i> Add Mood
+                    </button>
+                    <button class="tab-btn" onclick="showTab('moods')">
+                        <i class="fas fa-list"></i> All Moods
+                    </button>
+                </div>
+
+                <!-- Favorites Tab -->
+                <div id="favorites" class="tab-content active">
+                    <h2>Your Favorite Songs</h2>
+                    <ul class="favorites-list" id="favorites-list"></ul>
+                </div>
+
+                <!-- Add Mood Tab -->
+                <div id="add-mood" class="tab-content">
+                    <h2>Add New Mood & Songs</h2>
+                    <div class="input-group">
+                        <label for="new-mood">Mood Name</label>
+                        <input type="text" id="new-mood" placeholder="e.g., workout, romantic, nostalgic">
+                    </div>
+                    <button class="btn" onclick="showAddSongForm()">
+                        <i class="fas fa-plus"></i> Add Songs
+                    </button>
+                    
+                    <div class="add-song-form" id="add-song-form">
+                        <div class="song-inputs">
+                            <div class="input-group">
+                                <label for="song-title-input">Song Title</label>
+                                <input type="text" id="song-title-input" placeholder="Song title">
+                            </div>
+                            <div class="input-group">
+                                <label for="song-artist-input">Artist</label>
+                                <input type="text" id="song-artist-input" placeholder="Artist name">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="song-link-input">Link (YouTube/Spotify)</label>
+                            <input type="url" id="song-link-input" placeholder="https://youtu.be/...">
+                        </div>
+                        <button class="btn" onclick="addSong()">
+                            <i class="fas fa-plus"></i> Add Song
+                        </button>
+                        <button class="btn btn-secondary" onclick="saveMood()">
+                            <i class="fas fa-save"></i> Save Mood
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Moods Tab -->
+                <div id="moods" class="tab-content">
+                    <h2>Available Moods</h2>
+                    <div class="mood-tags" id="mood-tags"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSong = null;
+        let newMoodSongs = [];
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Load content based on tab
+            if (tabName === 'favorites') {
+                loadFavorites();
+            } else if (tabName === 'moods') {
+                loadMoods();
+            }
+        }
+
+        // Get recommendation
+        async function getRecommendation() {
+            const vibe = document.getElementById('vibe-input').value.trim();
+            if (!vibe) {
+                showMessage('Please enter a vibe!', 'error');
+                return;
+            }
+
+            showLoading(true);
+            hideMessage();
+
+            try {
+                const response = await fetch('/get_recommendation', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vibe })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentSong = data.song;
+                    document.getElementById('song-title').textContent = data.song.title;
+                    document.getElementById('song-artist').textContent = `by ${data.song.artist}`;
+                    document.getElementById('song-link').href = data.song.link;
+                    document.getElementById('recommendation-card').style.display = 'block';
+                    showMessage(`Found a ${data.mood} song for you!`, 'success');
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            } catch (error) {
+                showMessage('Error getting recommendation. Please try again.', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Save to favorites
+        async function saveToFavorites() {
+            if (!currentSong) return;
+
+            try {
+                const response = await fetch('/save_favorite', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        song_str: `${currentSong.title} by ${currentSong.artist} (${currentSong.link})`
+                    })
+                });
+                
+                const data = await response.json();
+                showMessage(data.message, data.success ? 'success' : 'error');
+                
+                if (data.success) {
+                    loadFavorites();
+                }
+            } catch (error) {
+                showMessage('Error saving to favorites.', 'error');
+            }
+        }
+
+        // Load favorites
+        async function loadFavorites() {
+            try {
+                const response = await fetch('/get_favorites');
+                const favorites = await response.json();
+                
+                const list = document.getElementById('favorites-list');
+                list.innerHTML = '';
+                
+                if (favorites.length === 0) {
+                    list.innerHTML = '<li>No favorites saved yet. Start discovering music!</li>';
+                } else {
+                    favorites.forEach(fav => {
+                        const li = document.createElement('li');
+                        li.textContent = fav;
+                        list.appendChild(li);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading favorites:', error);
+            }
+        }
+
+        // Load moods
+        async function loadMoods() {
+            try {
+                const response = await fetch('/get_moods');
+                const moods = await response.json();
+                
+                const container = document.getElementById('mood-tags');
+                container.innerHTML = '';
+                
+                moods.forEach(mood => {
+                    const tag = document.createElement('div');
+                    tag.className = 'mood-tag';
+                    tag.textContent = mood;
+                    tag.onclick = () => {
+                        document.getElementById('vibe-input').value = mood;
+                        getRecommendation();
+                    };
+                    container.appendChild(tag);
+                });
+            } catch (error) {
+                console.error('Error loading moods:', error);
+            }
+        }
+
+        // Show add song form
+        function showAddSongForm() {
+            const mood = document.getElementById('new-mood').value.trim();
+            if (!mood) {
+                showMessage('Please enter a mood name first!', 'error');
+                return;
+            }
+            
+            document.getElementById('add-song-form').style.display = 'block';
+            newMoodSongs = [];
+        }
+
+        // Add song to new mood
+        function addSong() {
+            const title = document.getElementById('song-title-input').value.trim();
+            const artist = document.getElementById('song-artist-input').value.trim();
+            const link = document.getElementById('song-link-input').value.trim();
+            
+            if (!title || !artist || !link) {
+                showMessage('Please fill in all song details!', 'error');
+                return;
+            }
+            
+            newMoodSongs.push({ title, artist, link });
+            
+            // Clear inputs
+            document.getElementById('song-title-input').value = '';
+            document.getElementById('song-artist-input').value = '';
+            document.getElementById('song-link-input').value = '';
+            
+            showMessage(`Added "${title}" by ${artist}`, 'success');
+        }
+
+        // Save new mood
+        async function saveMood() {
+            const mood = document.getElementById('new-mood').value.trim();
+            
+            if (!mood || newMoodSongs.length === 0) {
+                showMessage('Please add at least one song to the mood!', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/add_mood', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mood, songs: newMoodSongs })
+                });
+                
+                const data = await response.json();
+                showMessage(data.message, data.success ? 'success' : 'error');
+                
+                if (data.success) {
+                    // Clear form
+                    document.getElementById('new-mood').value = '';
+                    document.getElementById('add-song-form').style.display = 'none';
+                    newMoodSongs = [];
+                    loadMoods();
+                }
+            } catch (error) {
+                showMessage('Error saving mood.', 'error');
+            }
+        }
+
+        // Utility functions
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+
+        function showMessage(text, type) {
+            const message = document.getElementById('message');
+            message.textContent = text;
+            message.className = `message ${type}`;
+            message.style.display = 'block';
+            
+            setTimeout(() => {
+                hideMessage();
+            }, 5000);
+        }
+
+        function hideMessage() {
+            document.getElementById('message').style.display = 'none';
+        }
+
+        // Enter key support
+        document.getElementById('vibe-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                getRecommendation();
+            }
+        });
+
+        // Load initial data
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFavorites();
+            loadMoods();
+        });
+    </script>
+</body>
+</html> 
