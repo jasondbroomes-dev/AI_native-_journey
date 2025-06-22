@@ -1,0 +1,87 @@
+{
+  "calm": [
+    {
+      "title": "Weightless",
+      "artist": "Marconi Union",
+      "link": "https://youtu.be/UfcAVejslrU"
+    },
+    {
+      "title": "Night Owl",
+      "artist": "Galimatias",
+      "link": "https://youtu.be/ZFnzNfVfSNY"
+    },
+    {
+      "title": "River Flows In You",
+      "artist": "Yiruma",
+      "link": "https://youtu.be/7maJOI3QMu0"
+    }
+  ],
+  "focus": [
+    {
+      "title": "Clair de Lune",
+      "artist": "Debussy",
+      "link": "https://youtu.be/CvFH_6DNRCY"
+    },
+    {
+      "title": "Study Music",
+      "artist": "Various Artists",
+      "link": "https://youtu.be/WPni755-Krg"
+    },
+    {
+      "title": "Merry Christmas Mr. Lawrence",
+      "artist": "Ryuichi Sakamoto",
+      "link": "https://youtu.be/J--TDEHizVA"
+    }
+  ],
+  "energetic": [
+    {
+      "title": "Eye of the Tiger",
+      "artist": "Survivor",
+      "link": "https://youtu.be/btPJPFnesV4"
+    },
+    {
+      "title": "Stronger",
+      "artist": "Kanye West",
+      "link": "https://youtu.be/PiTn5h1t73g"
+    },
+    {
+      "title": "Power",
+      "artist": "Kanye West",
+      "link": "https://youtu.be/L53gjP-TtGE"
+    }
+  ],
+  "melancholy": [
+    {
+      "title": "Someone Like You",
+      "artist": "Adele",
+      "link": "https://youtu.be/hLQl3WQQoQ0"
+    },
+    {
+      "title": "Everybody Hurts",
+      "artist": "R.E.M.",
+      "link": "https://youtu.be/ijZRCIrTgQc"
+    },
+    {
+      "title": "Fix You",
+      "artist": "Coldplay",
+      "link": "https://youtu.be/k4V3Mo61fJM"
+    }
+  ],
+  "joyful": [
+    {
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "link": "https://youtu.be/ZbZSe6N_BXs"
+    },
+    {
+      "title": "Good Vibrations",
+      "artist": "The Beach Boys",
+      "link": "https://youtu.be/Eab_beh07HU"
+    },
+    {
+      "title": "Walking on Sunshine",
+      "artist": "Katrina & The Waves",
+      "link": "https://youtu.be/iPUmE-tne5U"
+    }
+  ]
+}
