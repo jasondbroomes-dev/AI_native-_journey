@@ -26,7 +26,7 @@ def save_json(filename, data):
 
 # Initialize data files
 builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
-    "chill": [
+    "😌 chill": [
         ("Blinding Lights", "The Weeknd", "https://youtu.be/4NRXx6U8ABQ"),
         ("Stay With Me", "Calvin Harris", "https://youtu.be/3TjqjMkHZeQ"),
         ("Midnight City", "M83", "https://youtu.be/dX3k_QDnzHE"),
@@ -34,7 +34,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("The Less I Know The Better", "Tame Impala", "https://youtu.be/8X8X8X8X8X8"),
         ("Lofi Beats", "Chillhop Music", "https://youtu.be/5qap5aO4i9A")
     ],
-    "hype": [
+    "🔥 hype": [
         ("Power", "Kanye West", "https://youtu.be/L53gjP-TtGE"),
         ("Stronger", "Kanye West", "https://youtu.be/PsO6ZnUZI0g"),
         ("Can't Hold Us", "Macklemore & Ryan Lewis", "https://youtu.be/Sv6dMFF_yts"),
@@ -42,7 +42,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Uptown Funk", "Mark Ronson ft. Bruno Mars", "https://youtu.be/OPf0YbXqDm0"),
         ("Shake It Off", "Taylor Swift", "https://youtu.be/nfWlot6h_JM")
     ],
-    "sad": [
+    "😢 sad": [
         ("Someone Like You", "Adele", "https://youtu.be/hLQl3WQQoQ0"),
         ("All of Me", "John Legend", "https://youtu.be/450p7goxZqg"),
         ("Say Something", "A Great Big World", "https://youtu.be/-2U0Ivkn2Ds"),
@@ -50,7 +50,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Skinny Love", "Bon Iver", "https://youtu.be/8CdcCD5V-d8"),
         ("Mad World", "Gary Jules", "https://youtu.be/4N3N1MlvVc4")
     ],
-    "study": [
+    "📚 study": [
         ("Clair de Lune", "Debussy", "https://youtu.be/CvFH_6DNRCY"),
         ("River Flows In You", "Yiruma", "https://youtu.be/7maJOI3QMu0"),
         ("Comptine d'un autre été", "Yann Tiersen", "https://youtu.be/nvHqJjW0dyY"),
@@ -58,7 +58,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Nuvole Bianche", "Ludovico Einaudi", "https://youtu.be/6ZdJcKvG_3k"),
         ("Weightless", "Marconi Union", "https://youtu.be/UfcAVejslrU")
     ],
-    "dance": [
+    "💃 dance": [
         ("Uptown Funk", "Mark Ronson ft. Bruno Mars", "https://youtu.be/OPf0YbXqDm0"),
         ("Get Lucky", "Daft Punk ft. Pharrell", "https://youtu.be/5NV6Rdv1a3I"),
         ("Blurred Lines", "Robin Thicke ft. T.I.", "https://youtu.be/yyDUC1LUXSU"),
@@ -66,7 +66,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Call Me Maybe", "Carly Rae Jepsen", "https://youtu.be/fWNaR-rxAic"),
         ("Party Rock Anthem", "LMFAO", "https://youtu.be/KQ6zr6kCPj8")
     ],
-    "happy": [
+    "😊 happy": [
         ("Happy", "Pharrell Williams", "https://youtu.be/ZbZSe6N_BXs"),
         ("Good Time", "Owl City & Carly Rae Jepsen", "https://youtu.be/9Sc-ir2UaGU"),
         ("Walking on Sunshine", "Katrina & The Waves", "https://youtu.be/iPUmE-tne5U"),
@@ -74,7 +74,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Best Day of My Life", "American Authors", "https://youtu.be/Y66j_BUCBMY"),
         ("Count on Me", "Bruno Mars", "https://youtu.be/6k8cpUkKK8c")
     ],
-    "romantic": [
+    "💕 romantic": [
         ("All of Me", "John Legend", "https://youtu.be/450p7goxZqg"),
         ("Perfect", "Ed Sheeran", "https://youtu.be/2Vv-BfVoq4g"),
         ("Just the Way You Are", "Bruno Mars", "https://youtu.be/LjhCEhWiKXk"),
@@ -82,7 +82,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Marry Me", "Train", "https://youtu.be/ghZt2cILcCU"),
         ("Thinking Out Loud", "Ed Sheeran", "https://youtu.be/lp-EO5I60KA")
     ],
-    "motivational": [
+    "💪 motivational": [
         ("Eye of the Tiger", "Survivor", "https://youtu.be/btPJPFnesV4"),
         ("We Will Rock You", "Queen", "https://youtu.be/-tJYN-eG1zk"),
         ("Don't Stop Believin'", "Journey", "https://youtu.be/1k8craCGpgs"),
@@ -90,7 +90,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Hall of Fame", "The Script ft. will.i.am", "https://youtu.be/mk48xRzuNvA"),
         ("The Climb", "Miley Cyrus", "https://youtu.be/NG2zyeVRcbs")
     ],
-    "party": [
+    "🎉 party": [
         ("Party Rock Anthem", "LMFAO", "https://youtu.be/KQ6zr6kCPj8"),
         ("I Gotta Feeling", "The Black Eyed Peas", "https://youtu.be/uSD4vsh1zBA"),
         ("We Found Love", "Rihanna ft. Calvin Harris", "https://youtu.be/0I647GU3Jsc"),
@@ -98,7 +98,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Gangnam Style", "PSY", "https://youtu.be/9bZkp7q19f0"),
         ("Shake It Off", "Taylor Swift", "https://youtu.be/nfWlot6h_JM")
     ],
-    "calm": [
+    "🧘 calm": [
         ("Weightless", "Marconi Union", "https://youtu.be/UfcAVejslrU"),
         ("Claire de Lune", "Debussy", "https://youtu.be/CvFH_6DNRCY"),
         ("River Flows In You", "Yiruma", "https://youtu.be/7maJOI3QMu0"),
@@ -106,7 +106,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Nuvole Bianche", "Ludovico Einaudi", "https://youtu.be/6ZdJcKvG_3k"),
         ("Comptine d'un autre été", "Yann Tiersen", "https://youtu.be/nvHqJjW0dyY")
     ],
-    "melancholy": [
+    "🌧️ melancholy": [
         ("Mad World", "Gary Jules", "https://youtu.be/4N3N1MlvVc4"),
         ("Skinny Love", "Bon Iver", "https://youtu.be/8CdcCD5V-d8"),
         ("Fix You", "Coldplay", "https://youtu.be/k4V3Mo61fJM"),
@@ -114,7 +114,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Creep", "Radiohead", "https://youtu.be/XFkzRNyygfk"),
         ("Hallelujah", "Jeff Buckley", "https://youtu.be/y8AWFf7EAc4")
     ],
-    "anxious": [
+    "😰 anxious": [
         ("Breathe Me", "Sia", "https://youtu.be/GCFJeS1vjqg"),
         ("Fix You", "Coldplay", "https://youtu.be/k4V3Mo61fJM"),
         ("The Scientist", "Coldplay", "https://youtu.be/RB-RcX5DS5A"),
@@ -122,7 +122,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Clocks", "Coldplay", "https://youtu.be/d020hcWA_Wg"),
         ("Viva La Vida", "Coldplay", "https://youtu.be/d020hcWA_Wg")
     ],
-    "hopeful": [
+    "✨ hopeful": [
         ("Count on Me", "Bruno Mars", "https://youtu.be/6k8cpUkKK8c"),
         ("Best Day of My Life", "American Authors", "https://youtu.be/Y66j_BUCBMY"),
         ("Walking on Sunshine", "Katrina & The Waves", "https://youtu.be/iPUmE-tne5U"),
@@ -130,7 +130,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("The Climb", "Miley Cyrus", "https://youtu.be/NG2zyeVRcbs"),
         ("Hall of Fame", "The Script ft. will.i.am", "https://youtu.be/mk48xRzuNvA")
     ],
-    "angry": [
+    "😠 angry": [
         ("In The End", "Linkin Park", "https://youtu.be/eVTXPUF4Oz4"),
         ("Numb", "Linkin Park", "https://youtu.be/kXYiU_JCYtU"),
         ("Crawling", "Linkin Park", "https://youtu.be/Gd9OhYroLN0"),
@@ -138,7 +138,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Given Up", "Linkin Park", "https://youtu.be/8sgycukafqQ"),
         ("One Step Closer", "Linkin Park", "https://youtu.be/4qlCC1GOwFw")
     ],
-    "reflective": [
+    "🤔 reflective": [
         ("The Scientist", "Coldplay", "https://youtu.be/RB-RcX5DS5A"),
         ("Yellow", "Coldplay", "https://youtu.be/d020hcWA_Wg"),
         ("Clocks", "Coldplay", "https://youtu.be/d020hcWA_Wg"),
@@ -146,7 +146,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Fix You", "Coldplay", "https://youtu.be/k4V3Mo61fJM"),
         ("Paradise", "Coldplay", "https://youtu.be/1G4isv_Fylg")
     ],
-    "fun": [
+    "🎈 fun": [
         ("Call Me Maybe", "Carly Rae Jepsen", "https://youtu.be/fWNaR-rxAic"),
         ("Gangnam Style", "PSY", "https://youtu.be/9bZkp7q19f0"),
         ("Shake It Off", "Taylor Swift", "https://youtu.be/nfWlot6h_JM"),
@@ -154,7 +154,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("I Gotta Feeling", "The Black Eyed Peas", "https://youtu.be/uSD4vsh1zBA"),
         ("Good Time", "Owl City & Carly Rae Jepsen", "https://youtu.be/9Sc-ir2UaGU")
     ],
-    "sleepy": [
+    "😴 sleepy": [
         ("Weightless", "Marconi Union", "https://youtu.be/UfcAVejslrU"),
         ("Claire de Lune", "Debussy", "https://youtu.be/CvFH_6DNRCY"),
         ("River Flows In You", "Yiruma", "https://youtu.be/7maJOI3QMu0"),
@@ -162,7 +162,7 @@ builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {
         ("Nuvole Bianche", "Ludovico Einaudi", "https://youtu.be/6ZdJcKvG_3k"),
         ("Comptine d'un autre été", "Yann Tiersen", "https://youtu.be/nvHqJjW0dyY")
     ],
-    "nostalgic": [
+    "📸 nostalgic": [
         ("Wonderwall", "Oasis", "https://youtu.be/bx1Bh8ZvH84"),
         ("Don't Look Back in Anger", "Oasis", "https://youtu.be/r8OipmKFDeM"),
         ("Champagne Supernova", "Oasis", "https://youtu.be/tI-5v4aHqXk"),
@@ -177,24 +177,24 @@ custom_song_library = load_json(CUSTOM_VIBES_FILE)
 favorites = load_json(FAVORITES_FILE, [])
 
 keyword_map = {
-    "relax": "chill", "peaceful": "calm", "lofi": "chill",
-    "energized": "hype", "happy": "happy", "joy": "happy", "pump": "hype",
-    "focused": "study", "bored": "study", "concentration": "study",
-    "down": "sad", "heartbroken": "sad", "cry": "sad",
-    "party": "party", "move": "dance", "groove": "dance",
-    "love": "romantic", "affection": "romantic", "sweet": "romantic",
-    "inspired": "motivational", "pump up": "motivational", "drive": "motivational",
-    "cheerful": "happy", "bright": "happy",
-    "sadness": "melancholy", "blue": "melancholy", "heartache": "melancholy",
-    "celebrate": "party",
-    "relaxing": "calm", "serene": "calm",
-    "memories": "nostalgic", "remember": "nostalgic", "wistful": "nostalgic",
-    "worried": "anxious", "nervous": "anxious", "tense": "anxious",
-    "optimistic": "hopeful", "bright future": "hopeful", "expectation": "hopeful",
-    "mad": "angry", "furious": "angry", "frustrated": "angry",
-    "thoughtful": "reflective", "pensive": "reflective", "introspective": "reflective",
-    "playful": "fun", "jolly": "fun", "lighthearted": "fun",
-    "tired": "sleepy", "drowsy": "sleepy", "relaxed": "sleepy"
+    "relax": "😌 chill", "peaceful": "🧘 calm", "lofi": "😌 chill",
+    "energized": "🔥 hype", "happy": "😊 happy", "joy": "😊 happy", "pump": "🔥 hype",
+    "focused": "📚 study", "bored": "📚 study", "concentration": "📚 study",
+    "down": "😢 sad", "heartbroken": "😢 sad", "cry": "😢 sad",
+    "party": "🎉 party", "move": "💃 dance", "groove": "💃 dance",
+    "love": "💕 romantic", "affection": "💕 romantic", "sweet": "💕 romantic",
+    "inspired": "💪 motivational", "pump up": "💪 motivational", "drive": "💪 motivational",
+    "cheerful": "😊 happy", "bright": "😊 happy",
+    "sadness": "🌧️ melancholy", "blue": "🌧️ melancholy", "heartache": "🌧️ melancholy",
+    "celebrate": "🎉 party",
+    "relaxing": "🧘 calm", "serene": "🧘 calm",
+    "memories": "📸 nostalgic", "remember": "📸 nostalgic", "wistful": "📸 nostalgic",
+    "worried": "😰 anxious", "nervous": "😰 anxious", "tense": "😰 anxious",
+    "optimistic": "✨ hopeful", "bright future": "✨ hopeful", "expectation": "✨ hopeful",
+    "mad": "😠 angry", "furious": "😠 angry", "frustrated": "😠 angry",
+    "thoughtful": "🤔 reflective", "pensive": "🤔 reflective", "introspective": "🤔 reflective",
+    "playful": "🎈 fun", "jolly": "🎈 fun", "lighthearted": "🎈 fun",
+    "tired": "😴 sleepy", "drowsy": "😴 sleepy", "relaxed": "😴 sleepy"
 }
 
 def get_full_library():
@@ -277,27 +277,27 @@ def get_word_recommendation():
     # Map words to moods based on their characteristics
     word_to_mood = {
         # Nouns
-        'music': 'happy', 'dance': 'dance', 'party': 'party', 'love': 'romantic',
-        'work': 'study', 'study': 'study', 'sleep': 'sleepy', 'dream': 'sleepy',
-        'heart': 'romantic', 'sun': 'happy', 'rain': 'melancholy', 'storm': 'angry',
-        'ocean': 'calm', 'mountain': 'motivational', 'road': 'motivational',
-        'friend': 'happy', 'family': 'romantic', 'home': 'calm',
+        'music': '😊 happy', 'dance': '💃 dance', 'party': '🎉 party', 'love': '💕 romantic',
+        'work': '📚 study', 'study': '📚 study', 'sleep': '😴 sleepy', 'dream': '😴 sleepy',
+        'heart': '💕 romantic', 'sun': '😊 happy', 'rain': '🌧️ melancholy', 'storm': '😠 angry',
+        'ocean': '🧘 calm', 'mountain': '💪 motivational', 'road': '💪 motivational',
+        'friend': '😊 happy', 'family': '💕 romantic', 'home': '🧘 calm',
         
         # Verbs
-        'dance': 'dance', 'sing': 'happy', 'laugh': 'happy', 'cry': 'sad',
-        'sleep': 'sleepy', 'dream': 'sleepy', 'work': 'study', 'study': 'study',
-        'run': 'motivational', 'fight': 'angry', 'love': 'romantic', 'hate': 'angry',
-        'relax': 'calm', 'party': 'party', 'celebrate': 'party', 'think': 'reflective',
-        'remember': 'nostalgic', 'hope': 'hopeful', 'worry': 'anxious',
+        'dance': '💃 dance', 'sing': '😊 happy', 'laugh': '😊 happy', 'cry': '😢 sad',
+        'sleep': '😴 sleepy', 'dream': '😴 sleepy', 'work': '📚 study', 'study': '📚 study',
+        'run': '💪 motivational', 'fight': '😠 angry', 'love': '💕 romantic', 'hate': '😠 angry',
+        'relax': '🧘 calm', 'party': '🎉 party', 'celebrate': '🎉 party', 'think': '🤔 reflective',
+        'remember': '📸 nostalgic', 'hope': '✨ hopeful', 'worry': '😰 anxious',
         
         # Adjectives
-        'happy': 'happy', 'sad': 'sad', 'angry': 'angry', 'calm': 'calm',
-        'excited': 'hype', 'tired': 'sleepy', 'energetic': 'hype', 'romantic': 'romantic',
-        'peaceful': 'calm', 'wild': 'party', 'quiet': 'study', 'loud': 'party',
-        'beautiful': 'romantic', 'ugly': 'angry', 'bright': 'happy', 'dark': 'melancholy',
-        'warm': 'romantic', 'cold': 'melancholy', 'soft': 'calm', 'hard': 'angry',
-        'smooth': 'chill', 'rough': 'angry', 'fast': 'hype', 'slow': 'chill',
-        'fun': 'fun', 'boring': 'study', 'amazing': 'happy', 'terrible': 'sad'
+        'happy': '😊 happy', 'sad': '😢 sad', 'angry': '😠 angry', 'calm': '🧘 calm',
+        'excited': '🔥 hype', 'tired': '😴 sleepy', 'energetic': '🔥 hype', 'romantic': '💕 romantic',
+        'peaceful': '🧘 calm', 'wild': '🎉 party', 'quiet': '📚 study', 'loud': '🎉 party',
+        'beautiful': '💕 romantic', 'ugly': '😠 angry', 'bright': '😊 happy', 'dark': '🌧️ melancholy',
+        'warm': '💕 romantic', 'cold': '🌧️ melancholy', 'soft': '🧘 calm', 'hard': '😠 angry',
+        'smooth': '😌 chill', 'rough': '😠 angry', 'fast': '🔥 hype', 'slow': '😌 chill',
+        'fun': '🎈 fun', 'boring': '📚 study', 'amazing': '😊 happy', 'terrible': '😢 sad'
     }
     
     # Find the best mood match based on the words
@@ -314,11 +314,11 @@ def get_word_recommendation():
                 if word in mood_word or mood_word in word:
                     mood_scores[mood] = mood_scores.get(mood, 0) + 0.5
     
-    # Get the mood with highest score, or default to 'chill'
+    # Get the mood with highest score, or default to '😌 chill'
     if mood_scores:
         best_mood = max(mood_scores, key=mood_scores.get)
     else:
-        best_mood = 'chill'
+        best_mood = '😌 chill'
     
     # Get recommendation for the best mood
     full_library = get_full_library()
