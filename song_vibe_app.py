@@ -13,7 +13,7 @@ FAVORITES_FILE = 'favorite_songs.json'
 
 def load_json(filename, default_data={}):
     if os.path.exists(filename):
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             try:
                 return json.load(f)
             except json.JSONDecodeError:
@@ -21,8 +21,8 @@ def load_json(filename, default_data={}):
     return default_data
 
 def save_json(filename, data):
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=2)
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 # Initialize data files
 builtin_song_library = load_json(BUILTIN_SONG_LIBRARY_FILE, {

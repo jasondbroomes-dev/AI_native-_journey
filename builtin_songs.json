@@ -1,90 +1,197 @@
 {
-  "chill": [
+  "😌 chill": [
     [
-      "Lo-Fi Beats",
+      "Blinding Lights",
+      "The Weeknd",
+      "https://youtu.be/4NRXx6U8ABQ"
+    ],
+    [
+      "Stay With Me",
+      "Calvin Harris",
+      "https://youtu.be/3TjqjMkHZeQ"
+    ],
+    [
+      "Midnight City",
+      "M83",
+      "https://youtu.be/dX3k_QDnzHE"
+    ],
+    [
+      "Redbone",
+      "Childish Gambino",
+      "https://youtu.be/Kp7eSUU9oy8"
+    ],
+    [
+      "The Less I Know The Better",
+      "Tame Impala",
+      "https://youtu.be/8X8X8X8X8X8"
+    ],
+    [
+      "Lofi Beats",
       "Chillhop Music",
       "https://youtu.be/5qap5aO4i9A"
-    ],
-    [
-      "Weightless",
-      "Marconi Union",
-      "https://open.spotify.com/track/5c1O1WlU9fK3VQoZ9LrF2G"
-    ],
-    [
-      "Coffee",
-      "Beabadoobee",
-      "https://youtu.be/fM3O-WDqSNA"
     ]
   ],
-  "hype": [
+  "⚡ hype": [
     [
       "Power",
       "Kanye West",
       "https://youtu.be/L53gjP-TtGE"
     ],
     [
+      "Stronger",
+      "Kanye West",
+      "https://youtu.be/PsO6ZnUZI0g"
+    ],
+    [
       "Can't Hold Us",
       "Macklemore & Ryan Lewis",
-      "https://youtu.be/2zNSgSzhBfM"
+      "https://youtu.be/Sv6dMFF_yts"
     ],
     [
-      "Eye of the Tiger",
-      "Survivor",
-      "https://youtu.be/btPJPFnesV4"
-    ]
-  ],
-  "sad": [
-    [
-      "Someone Like You",
-      "Adele",
-      "https://youtu.be/hLQl3WQQoQ0"
+      "Titanium",
+      "David Guetta ft. Sia",
+      "https://youtu.be/JRfuAukYTKg"
     ],
-    [
-      "Skinny Love",
-      "Bon Iver",
-      "https://youtu.be/ssdgFoHLwnk"
-    ],
-    [
-      "The Night We Met",
-      "Lord Huron",
-      "https://youtu.be/KtlgYxa6BMU"
-    ]
-  ],
-  "study": [
-    [
-      "Clair de Lune",
-      "Debussy",
-      "https://youtu.be/CvFH_6DNRCY"
-    ],
-    [
-      "Merry Christmas Mr. Lawrence",
-      "Ryuichi Sakamoto",
-      "https://youtu.be/J--TDEHizVA"
-    ],
-    [
-      "Study Session",
-      "Brain.fm",
-      "https://www.youtube.com/watch?v=qWZGtLZaBBc"
-    ]
-  ],
-  "dance": [
     [
       "Uptown Funk",
       "Mark Ronson ft. Bruno Mars",
       "https://youtu.be/OPf0YbXqDm0"
     ],
     [
-      "Don't Start Now",
-      "Dua Lipa",
-      "https://youtu.be/oygrmJFKYZY"
-    ],
-    [
-      "Dancing Queen",
-      "ABBA",
-      "https://youtu.be/xFrGuyw1V8s"
+      "Shake It Off",
+      "Taylor Swift",
+      "https://youtu.be/nfWlot6h_JM"
     ]
   ],
-  "romantic": [
+  "💔 sad": [
+    [
+      "Someone Like You",
+      "Adele",
+      "https://youtu.be/hLQl3WQQoQ0"
+    ],
+    [
+      "All of Me",
+      "John Legend",
+      "https://youtu.be/450p7goxZqg"
+    ],
+    [
+      "Say Something",
+      "A Great Big World",
+      "https://youtu.be/-2U0Ivkn2Ds"
+    ],
+    [
+      "Fix You",
+      "Coldplay",
+      "https://youtu.be/k4V3Mo61fJM"
+    ],
+    [
+      "Skinny Love",
+      "Bon Iver",
+      "https://youtu.be/8CdcCD5V-d8"
+    ],
+    [
+      "Mad World",
+      "Gary Jules",
+      "https://youtu.be/4N3N1MlvVc4"
+    ]
+  ],
+  "📖 study": [
+    [
+      "Clair de Lune",
+      "Debussy",
+      "https://youtu.be/CvFH_6DNRCY"
+    ],
+    [
+      "River Flows In You",
+      "Yiruma",
+      "https://youtu.be/7maJOI3QMu0"
+    ],
+    [
+      "Comptine d'un autre été",
+      "Yann Tiersen",
+      "https://youtu.be/nvHqJjW0dyY"
+    ],
+    [
+      "Experience",
+      "Ludovico Einaudi",
+      "https://youtu.be/hhEJJkOX0Hs"
+    ],
+    [
+      "Nuvole Bianche",
+      "Ludovico Einaudi",
+      "https://youtu.be/6ZdJcKvG_3k"
+    ],
+    [
+      "Weightless",
+      "Marconi Union",
+      "https://youtu.be/UfcAVejslrU"
+    ]
+  ],
+  "🕺 dance": [
+    [
+      "Uptown Funk",
+      "Mark Ronson ft. Bruno Mars",
+      "https://youtu.be/OPf0YbXqDm0"
+    ],
+    [
+      "Get Lucky",
+      "Daft Punk ft. Pharrell",
+      "https://youtu.be/5NV6Rdv1a3I"
+    ],
+    [
+      "Blurred Lines",
+      "Robin Thicke ft. T.I.",
+      "https://youtu.be/yyDUC1LUXSU"
+    ],
+    [
+      "We Found Love",
+      "Rihanna ft. Calvin Harris",
+      "https://youtu.be/0I647GU3Jsc"
+    ],
+    [
+      "Call Me Maybe",
+      "Carly Rae Jepsen",
+      "https://youtu.be/fWNaR-rxAic"
+    ],
+    [
+      "Party Rock Anthem",
+      "LMFAO",
+      "https://youtu.be/KQ6zr6kCPj8"
+    ]
+  ],
+  "😄 happy": [
+    [
+      "Happy",
+      "Pharrell Williams",
+      "https://youtu.be/ZbZSe6N_BXs"
+    ],
+    [
+      "Good Time",
+      "Owl City & Carly Rae Jepsen",
+      "https://youtu.be/9Sc-ir2UaGU"
+    ],
+    [
+      "Walking on Sunshine",
+      "Katrina & The Waves",
+      "https://youtu.be/iPUmE-tne5U"
+    ],
+    [
+      "I Gotta Feeling",
+      "The Black Eyed Peas",
+      "https://youtu.be/uSD4vsh1zBA"
+    ],
+    [
+      "Best Day of My Life",
+      "American Authors",
+      "https://youtu.be/Y66j_BUCBMY"
+    ],
+    [
+      "Count on Me",
+      "Bruno Mars",
+      "https://youtu.be/6k8cpUkKK8c"
+    ]
+  ],
+  "💘 romantic": [
     [
       "All of Me",
       "John Legend",
@@ -96,118 +203,142 @@
       "https://youtu.be/2Vv-BfVoq4g"
     ],
     [
-      "Adore You",
-      "Harry Styles",
-      "https://youtu.be/yezDEWako8U"
+      "Just the Way You Are",
+      "Bruno Mars",
+      "https://youtu.be/LjhCEhWiKXk"
+    ],
+    [
+      "A Thousand Years",
+      "Christina Perri",
+      "https://youtu.be/rtOvBOTyX00"
+    ],
+    [
+      "Marry Me",
+      "Train",
+      "https://youtu.be/ghZt2cILcCU"
+    ],
+    [
+      "Thinking Out Loud",
+      "Ed Sheeran",
+      "https://youtu.be/lp-EO5I60KA"
     ]
   ],
-  "motivational": [
+  "💪 motivational": [
+    [
+      "Eye of the Tiger",
+      "Survivor",
+      "https://youtu.be/btPJPFnesV4"
+    ],
+    [
+      "We Will Rock You",
+      "Queen",
+      "https://youtu.be/-tJYN-eG1zk"
+    ],
+    [
+      "Don't Stop Believin'",
+      "Journey",
+      "https://youtu.be/1k8craCGpgs"
+    ],
     [
       "Lose Yourself",
       "Eminem",
       "https://youtu.be/_Yhyp-_hX2s"
     ],
     [
-      "Stronger",
-      "Kanye West",
-      "https://youtu.be/Pi5PntUju_E"
+      "Hall of Fame",
+      "The Script ft. will.i.am",
+      "https://youtu.be/mk48xRzuNvA"
     ],
     [
-      "Fight Song",
-      "Rachel Platten",
-      "https://youtu.be/XsX3ATc3FbA"
+      "The Climb",
+      "Miley Cyrus",
+      "https://youtu.be/NG2zyeVRcbs"
     ]
   ],
-  "happy": [
-    [
-      "Happy",
-      "Pharrell Williams",
-      "https://youtu.be/ZbZSe6N_BXs"
-    ],
-    [
-      "Can't Stop The Feeling!",
-      "Justin Timberlake",
-      "https://youtu.be/ru0K8uYEZWw"
-    ],
-    [
-      "Walking on Sunshine",
-      "Katrina & The Waves",
-      "https://youtu.be/iPUmE-tne5U"
-    ]
-  ],
-  "melancholy": [
-    [
-      "Fix You",
-      "Coldplay",
-      "https://youtu.be/k4V3Mo61fJM"
-    ],
-    [
-      "Everybody Hurts",
-      "R.E.M.",
-      "https://youtu.be/jWZsXfFuC7Y"
-    ],
-    [
-      "Tears in Heaven",
-      "Eric Clapton",
-      "https://youtu.be/JxPj3GAYYZ0"
-    ]
-  ],
-  "party": [
-    [
-      "24K Magic",
-      "Bruno Mars",
-      "https://youtu.be/UqyT8IEBkvY"
-    ],
-    [
-      "I Gotta Feeling",
-      "Black Eyed Peas",
-      "https://youtu.be/uSD4vsh1zDA"
-    ],
+  "🎊 party": [
     [
       "Party Rock Anthem",
       "LMFAO",
       "https://youtu.be/KQ6zr6kCPj8"
+    ],
+    [
+      "I Gotta Feeling",
+      "The Black Eyed Peas",
+      "https://youtu.be/uSD4vsh1zBA"
+    ],
+    [
+      "We Found Love",
+      "Rihanna ft. Calvin Harris",
+      "https://youtu.be/0I647GU3Jsc"
+    ],
+    [
+      "Call Me Maybe",
+      "Carly Rae Jepsen",
+      "https://youtu.be/fWNaR-rxAic"
+    ],
+    [
+      "Gangnam Style",
+      "PSY",
+      "https://youtu.be/9bZkp7q19f0"
+    ],
+    [
+      "Shake It Off",
+      "Taylor Swift",
+      "https://youtu.be/nfWlot6h_JM"
     ]
   ],
-  "calm": [
-    [
-      "River Flows In You",
-      "Yiruma",
-      "https://youtu.be/7maJOI3QMu0"
-    ],
+  "🧘 calm": [
     [
       "Weightless",
       "Marconi Union",
       "https://youtu.be/UfcAVejslrU"
     ],
     [
-      "Sunset Lover",
-      "Petit Biscuit",
-      "https://youtu.be/0z0Qzn0gf1I"
-    ]
-  ],
-  "nostalgic": [
-    [
-      "Summer of '69",
-      "Bryan Adams",
-      "https://youtu.be/eFjjO_lhf9c"
+      "Claire de Lune",
+      "Debussy",
+      "https://youtu.be/CvFH_6DNRCY"
     ],
     [
-      "Take On Me",
-      "a-ha",
-      "https://youtu.be/djV11Xbc914"
+      "River Flows In You",
+      "Yiruma",
+      "https://youtu.be/7maJOI3QMu0"
     ],
     [
-      "Yesterday",
-      "The Beatles",
-      "https://youtu.be/NrgmdOz227I"
+      "Experience",
+      "Ludovico Einaudi",
+      "https://youtu.be/hhEJJkOX0Hs"
+    ],
+    [
+      "Nuvole Bianche",
+      "Ludovico Einaudi",
+      "https://youtu.be/6ZdJcKvG_3k"
+    ],
+    [
+      "Comptine d'un autre été",
+      "Yann Tiersen",
+      "https://youtu.be/nvHqJjW0dyY"
     ]
   ],
-  "anxious": [
+  "🌧️ melancholy": [
     [
-      "Breathe Me",
-      "Sia",
-      "https://youtu.be/ghPcYqn0p4Y"
+      "Mad World",
+      "Gary Jules",
+      "https://youtu.be/4N3N1MlvVc4"
+    ],
+    [
+      "Skinny Love",
+      "Bon Iver",
+      "https://youtu.be/8CdcCD5V-d8"
+    ],
+    [
+      "Fix You",
+      "Coldplay",
+      "https://youtu.be/k4V3Mo61fJM"
+    ],
+    [
+      "Say Something",
+      "A Great Big World",
+      "https://youtu.be/-2U0Ivkn2Ds"
     ],
     [
       "Creep",
@@ -215,67 +346,149 @@
       "https://youtu.be/XFkzRNyygfk"
     ],
     [
-      "Everybody's Got To Learn Sometime",
-      "Beck",
-      "https://youtu.be/yy5WnK6YhMQ"
-    ]
-  ],
-  "hopeful": [
-    [
-      "Here Comes The Sun",
-      "The Beatles",
-      "https://youtu.be/KQetemT1sWc"
-    ],
-    [
-      "Dog Days Are Over",
-      "Florence + The Machine",
-      "https://youtu.be/iWOyfLBYtuU"
-    ],
-    [
-      "Good Life",
-      "OneRepublic",
-      "https://youtu.be/jZhQOvvV45w"
-    ]
-  ],
-  "angry": [
-    [
-      "Break Stuff",
-      "Limp Bizkit",
-      "https://youtu.be/ZpUYjpKg9KY"
-    ],
-    [
-      "Killing In The Name",
-      "Rage Against The Machine",
-      "https://youtu.be/bWXazVhlyxQ"
-    ],
-    [
-      "You Oughta Know",
-      "Alanis Morissette",
-      "https://youtu.be=NPcyTyilmYY"
-    ]
-  ],
-  "reflective": [
-    [
-      "The Sound of Silence",
-      "Simon & Garfunkel",
-      "https://youtu.be/4zLfCnGVeL4"
-    ],
-    [
       "Hallelujah",
       "Jeff Buckley",
       "https://youtu.be/y8AWFf7EAc4"
-    ],
-    [
-      "Fast Car",
-      "Tracy Chapman",
-      "https://youtu.be/uTIB10eQnA0"
     ]
   ],
-  "fun": [
+  "😰 anxious": [
     [
-      "Happy",
-      "Pharrell Williams",
-      "https://youtu.be/ZbZSe6N_BXs"
+      "Breathe Me",
+      "Sia",
+      "https://youtu.be/GCFJeS1vjqg"
+    ],
+    [
+      "Fix You",
+      "Coldplay",
+      "https://youtu.be/k4V3Mo61fJM"
+    ],
+    [
+      "The Scientist",
+      "Coldplay",
+      "https://youtu.be/RB-RcX5DS5A"
+    ],
+    [
+      "Yellow",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ],
+    [
+      "Clocks",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ],
+    [
+      "Viva La Vida",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ]
+  ],
+  "⭐ hopeful": [
+    [
+      "Count on Me",
+      "Bruno Mars",
+      "https://youtu.be/6k8cpUkKK8c"
+    ],
+    [
+      "Best Day of My Life",
+      "American Authors",
+      "https://youtu.be/Y66j_BUCBMY"
+    ],
+    [
+      "Walking on Sunshine",
+      "Katrina & The Waves",
+      "https://youtu.be/iPUmE-tne5U"
+    ],
+    [
+      "Good Time",
+      "Owl City & Carly Rae Jepsen",
+      "https://youtu.be/9Sc-ir2UaGU"
+    ],
+    [
+      "The Climb",
+      "Miley Cyrus",
+      "https://youtu.be/NG2zyeVRcbs"
+    ],
+    [
+      "Hall of Fame",
+      "The Script ft. will.i.am",
+      "https://youtu.be/mk48xRzuNvA"
+    ]
+  ],
+  "😤 angry": [
+    [
+      "In The End",
+      "Linkin Park",
+      "https://youtu.be/eVTXPUF4Oz4"
+    ],
+    [
+      "Numb",
+      "Linkin Park",
+      "https://youtu.be/kXYiU_JCYtU"
+    ],
+    [
+      "Crawling",
+      "Linkin Park",
+      "https://youtu.be/Gd9OhYroLN0"
+    ],
+    [
+      "Breaking the Habit",
+      "Linkin Park",
+      "https://youtu.be/v2H4l9RpAMM"
+    ],
+    [
+      "Given Up",
+      "Linkin Park",
+      "https://youtu.be/8sgycukafqQ"
+    ],
+    [
+      "One Step Closer",
+      "Linkin Park",
+      "https://youtu.be/4qlCC1GOwFw"
+    ]
+  ],
+  "🤔 reflective": [
+    [
+      "The Scientist",
+      "Coldplay",
+      "https://youtu.be/RB-RcX5DS5A"
+    ],
+    [
+      "Yellow",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ],
+    [
+      "Clocks",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ],
+    [
+      "Viva La Vida",
+      "Coldplay",
+      "https://youtu.be/d020hcWA_Wg"
+    ],
+    [
+      "Fix You",
+      "Coldplay",
+      "https://youtu.be/k4V3Mo61fJM"
+    ],
+    [
+      "Paradise",
+      "Coldplay",
+      "https://youtu.be/1G4isv_Fylg"
+    ]
+  ],
+  "🎈 fun": [
+    [
+      "Call Me Maybe",
+      "Carly Rae Jepsen",
+      "https://youtu.be/fWNaR-rxAic"
+    ],
+    [
+      "Gangnam Style",
+      "PSY",
+      "https://youtu.be/9bZkp7q19f0"
     ],
     [
       "Shake It Off",
@@ -283,26 +496,83 @@
       "https://youtu.be/nfWlot6h_JM"
     ],
     [
-      "Can't Stop The Feeling",
-      "Justin Timberlake",
-      "https://youtu.be/ru0K8uYEZWw"
+      "Party Rock Anthem",
+      "LMFAO",
+      "https://youtu.be/KQ6zr6kCPj8"
+    ],
+    [
+      "I Gotta Feeling",
+      "The Black Eyed Peas",
+      "https://youtu.be/uSD4vsh1zBA"
+    ],
+    [
+      "Good Time",
+      "Owl City & Carly Rae Jepsen",
+      "https://youtu.be/9Sc-ir2UaGU"
     ]
   ],
-  "sleepy": [
+  "😴 sleepy": [
     [
-      "Night Owl",
-      "Galimatias",
-      "https://youtu.be/8-SxHJ0ayN8"
+      "Weightless",
+      "Marconi Union",
+      "https://youtu.be/UfcAVejslrU"
     ],
     [
-      "Holocene",
-      "Bon Iver",
-      "https://youtu.be/TapN6N8OYMI"
+      "Claire de Lune",
+      "Debussy",
+      "https://youtu.be/CvFH_6DNRCY"
     ],
     [
-      "Sunset Lover",
-      "Petit Biscuit",
-      "https://youtu.be/0z0Qzn0gf1I"
+      "River Flows In You",
+      "Yiruma",
+      "https://youtu.be/7maJOI3QMu0"
+    ],
+    [
+      "Experience",
+      "Ludovico Einaudi",
+      "https://youtu.be/hhEJJkOX0Hs"
+    ],
+    [
+      "Nuvole Bianche",
+      "Ludovico Einaudi",
+      "https://youtu.be/6ZdJcKvG_3k"
+    ],
+    [
+      "Comptine d'un autre été",
+      "Yann Tiersen",
+      "https://youtu.be/nvHqJjW0dyY"
+    ]
+  ],
+  "📷 nostalgic": [
+    [
+      "Wonderwall",
+      "Oasis",
+      "https://youtu.be/bx1Bh8ZvH84"
+    ],
+    [
+      "Don't Look Back in Anger",
+      "Oasis",
+      "https://youtu.be/r8OipmKFDeM"
+    ],
+    [
+      "Champagne Supernova",
+      "Oasis",
+      "https://youtu.be/tI-5v4aHqXk"
+    ],
+    [
+      "Creep",
+      "Radiohead",
+      "https://youtu.be/XFkzRNyygfk"
+    ],
+    [
+      "Karma Police",
+      "Radiohead",
+      "https://youtu.be/1uYWYWPc9HU"
+    ],
+    [
+      "No Surprises",
+      "Radiohead",
+      "https://youtu.be/u5CVsCnxyXg"
     ]
   ]
 }
