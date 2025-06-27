@@ -213,6 +213,10 @@ def get_full_library():
 def index():
     return render_template('song_vibe.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/get_recommendation', methods=['POST'])
 def get_recommendation():
     vibe_input = request.json.get('vibe', '').lower()
