@@ -1,63 +1,8 @@
 """
-Mini Project Definition Document
-
-Project Title:
 Song Vibe Recommender
 
-Project Purpose:
-Create an interactive Python application that recommends songs based on a user's mood or vibe.
-The app lets users choose from preset moods or add their own custom moods and songs.
-It also saves favorite songs for easy access later.
-
-Project Objectives:
-- Provide personalized song recommendations based on mood input.
-- Support flexible mood recognition using keyword mapping.
-- Allow users to add new mood categories with custom songs (title, artist, link).
-- Persist user-added moods and favorites between sessions using JSON and text files.
-- Enable users to view and manage their favorite songs.
-
-Target Users:
-- Music lovers and casual listeners seeking mood-based music discovery.
-- Users comfortable running simple Python scripts or command-line apps.
-- People who want to save and revisit favorite songs easily.
-
-Inputs:
-- User mood or vibe text input.
-- User commands: add mood, view favorites, quit.
-- New mood name and multiple song entries (title, artist, link).
-- Save confirmation for favorite songs.
-
-Processing:
-- Match user input to built-in or custom mood categories (exact or keyword match).
-- Randomly select a song from the matched mood category.
-- Save custom moods and favorites to files for persistence.
-- Check for duplicates when saving favorites.
-
-Outputs:
-- Display song recommendations with title, artist, and streaming link.
-- Confirmation messages for saved favorites and added moods.
-- List of saved favorite songs upon user request.
-- Informative error or guidance messages for unmatched moods or invalid input.
-
-Features:
-- Built-in moods with curated song lists.
-- AI-inspired keyword matching for flexible input recognition.
-- User-defined mood creation and immediate usage.
-- Persistent storage of custom moods and favorite songs.
-- Duplicate detection for favorites.
-- Command-line interface for easy interaction.
-
-Technology Stack:
-- Python 3.x
-- JSON for data persistence
-- Text files for storing favorites
-
-Success Criteria:
-- User can get relevant song recommendations by typing moods or keywords.
-- User can add new moods with songs and retrieve recommendations from them.
-- User's custom moods and favorites persist across program runs.
-- User can view and manage their favorite songs.
-- The app handles invalid inputs gracefully.
+A Python application that recommends songs based on user mood or vibe.
+Features mood-based recommendations, custom mood creation, and favorite song management.
 """
 
 import random
