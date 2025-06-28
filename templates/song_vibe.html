@@ -432,9 +432,44 @@
             border: 1px solid var(--accent-color);
             color: var(--accent-color);
         }
+
+        /* CD Image */
+        .cd-image {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: 80px;
+            height: 80px;
+            z-index: 1000;
+            animation: rotate 20s linear infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .cd-image:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive CD positioning */
+        @media (max-width: 768px) {
+            .cd-image {
+                top: 1rem;
+                right: 1rem;
+                width: 60px;
+                height: 60px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- CD Image in top right -->
+    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="CD" class="cd-image">
+    
     <div class="container">
         <div class="header">
             <h1><i class="fas fa-music"></i> SongVibe</h1>
@@ -543,9 +578,6 @@
             <div id="about" class="tab-content">
                 <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">📖 About</h2>
                 <div class="project-doc">
-                    <h3>🎵 Song Vibe Recommender</h3>
-                    <p>Welcome to your personal music companion! This app helps you discover the perfect songs for every mood and moment.</p>
-                    
                     <div style="text-align: center; margin-top: 2rem;">
                         <a href="/about" class="btn btn-primary">
                             <i class="fas fa-info-circle me-2"></i>Learn More About This Project
