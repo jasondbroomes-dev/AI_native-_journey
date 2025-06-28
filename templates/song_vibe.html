@@ -482,7 +482,7 @@
                     <i class="fas fa-list"></i> All Vibes
                 </button>
                 <button class="tab-button" onclick="showTab('about')">
-                    <i class="fas fa-info-circle"></i> About
+                    <i class="fas fa-star"></i> About
                 </button>
             </div>
 
@@ -541,13 +541,78 @@
             </div>
 
             <div id="about" class="tab-content">
-                <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">📖 About</h2>
-                <div class="project-doc">
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <a href="/about" class="btn btn-primary">
-                            <i class="fas fa-info-circle me-2"></i>Learn More About This Project
-                        </a>
+                <div class="about-hero">
+                    <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; text-align: center; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        🎵 Your Personal Music Matchmaker
+                    </h2>
+                    <p style="font-size: 1.2rem; text-align: center; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                        Discover the perfect song for every moment, mood, and feeling in your life
+                    </p>
+                </div>
+
+                <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="feature-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🎯</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">Instant Mood Matching</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Just tell us how you're feeling - whether you're 💃 hype, 😌 chill, 😢 emotional, or 😄 happy - and we'll instantly find the perfect song that matches your vibe.
+                        </p>
                     </div>
+
+                    <div class="feature-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🎭</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">Word-Based Discovery</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Describe your mood with three simple words - a noun, verb, and adjective. Our AI will analyze your words and find the perfect musical match for your unique feeling.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">❤️</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">Save Your Favorites</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Build your personal music collection by saving songs you love. Your favorites are stored locally, so you can rediscover your perfect matches anytime.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🎵</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">Curated Song Library</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Explore our carefully curated collection of songs across 18 different mood categories. From workout anthems to study sessions, we've got the perfect track for every occasion.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="how-it-works" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">✨ How It Works</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">1️⃣</div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Describe Your Mood</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Tell us how you're feeling or use our word-based mood analyzer</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">2️⃣</div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Get Your Match</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Our AI instantly finds the perfect song for your vibe</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">3️⃣</div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Listen & Save</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Play your song and save it to your favorites</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section" style="text-align: center; margin-top: 3rem;">
+                    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 1rem;">Ready to Find Your Perfect Song?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">
+                        Start your musical journey now - no account needed, just pure music discovery! 🎶
+                    </p>
+                    <button class="btn btn-primary" onclick="showTab('add-vibe')" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        <i class="fas fa-music me-2"></i>Start Discovering
+                    </button>
                 </div>
             </div>
         </div>
